@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-8 col-xs-offset-2">
+      <h1>Cocktails#show</h1>
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
+        <div class="card-category"><%= @cocktail.name %></div>
+        <div class="card-description">
+          <h2>Ingredients</h2>
+          <% @cocktail.doses.each do |dose| %>
+          <ul>
+            <li class="list-group-item">
+              <%= dose.description %>
+            </li>
+          </ul>
+          <% end %>
+        </div>
+        <a class="card-link" href="#" ></a>
+      </div>
+      <ul class="list-group">
+        <li class="list-group-item">
+          <%= link_to 'Back', cocktail_path %>
+        </li>
+        <li class="list-group-item">
+          <%= link_to 'Add Ingredients', new_cocktail_dose_path(@cocktail) %>
+        </li>
+      </ul>
+
+
+    </div>
+  </div>
+</div>
+

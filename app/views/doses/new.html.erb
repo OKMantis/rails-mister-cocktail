@@ -1,2 +1,10 @@
-<h1>Doses#new</h1>
-<p>Find me in app/views/doses/new.html.erb</p>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6 col-xs-offset-3">
+      <h1>Doses#new</h1>
+      <%= render 'form', dose: @dose.cocktail %>
+      <%= link_to 'Back', cocktails_path %>
+    </div>
+  </div>
+</div>
+

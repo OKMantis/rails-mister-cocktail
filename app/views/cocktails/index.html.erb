@@ -1,25 +1,21 @@
-<div class="container">
-  <div class="row">
-    <div class="col-xs-6 col-xs-offset-3">
-      <h1>Cocktails#index</h1>
-      <% @cocktails.each do |cocktail| %>
-      <div class="product">
-        <div class='product-body'>
-          <h3><%= cocktail.name %></h3>
-          <p><%= link_to 'Show', cocktail_path(cocktail) %></p>
-          <p class="btn-center"><%= link_to 'Delete', cocktail_path(cocktail),
-         method: :delete, data: { confirm: "Are you sure?" } %></p>
-        </div>
-
-        <ul class="list-inline product-controls hidden-sm hidden-xs">
-          <li><a href=""><i class="fa fa-heart"></i></a></li>
-          <li><a href=""><i class="fa fa-share"></i></a></li>
-          <li><a href=""><i class="fa fa-star"></i></a></li>
-        </ul>
-      </div>
-      <% end %>
-      <div class="btn-center"><%= link_to 'Add Cocktail', new_cocktail_path, class: 'btn-treehouse' %></div>
-    </div>
-  </div>
+<div>
+  <%= render 'navbar'%>
 </div>
 
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-4">
+        <% @cocktails.each do |cocktail| %>
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path cocktail.photo %>');">
+          <div class="card-category"><%= cocktail.name %></div>
+          <div class="card-description">
+            <p><%= link_to 'Show', cocktail_path(cocktail) %></p>
+            <p class="btn-center"><%= link_to 'Delete', cocktail_path(cocktail),
+            method: :delete, data: { confirm: "Are you sure?" } %></p>
+          </div>
+ <!--          <a class="card-link" href="#" ></a> -->
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>

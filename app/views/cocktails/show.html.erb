@@ -8,8 +8,10 @@
           <h2>Ingredients</h2>
           <% @cocktail.doses.each do |dose| %>
           <ul>
-            <li class="list-group-item">
+            <li>
               <%= dose.description %>
+              <%= link_to 'Delete', dose_path(dose),
+         method: :delete, data: { confirm: "Are you sure?" } %>
             </li>
           </ul>
           <% end %>

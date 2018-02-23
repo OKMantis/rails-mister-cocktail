@@ -7,7 +7,10 @@
         <div class='product-body'>
           <h3><%= cocktail.name %></h3>
           <p><%= link_to 'Show', cocktail_path(cocktail) %></p>
+          <p class="btn-center"><%= link_to 'Delete', cocktail_path(cocktail),
+         method: :delete, data: { confirm: "Are you sure?" } %></p>
         </div>
+
         <ul class="list-inline product-controls hidden-sm hidden-xs">
           <li><a href=""><i class="fa fa-heart"></i></a></li>
           <li><a href=""><i class="fa fa-share"></i></a></li>
@@ -15,7 +18,7 @@
         </ul>
       </div>
       <% end %>
-         <div class="btn-center"><%= link_to 'Add Cocktail', new_cocktail_path, class: 'btn-treehouse' %></div>
+      <div class="btn-center"><%= link_to 'Add Cocktail', new_cocktail_path, class: 'btn-treehouse' %></div>
     </div>
   </div>
 </div>

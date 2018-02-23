@@ -7,6 +7,12 @@
   background-color: #eaeaea;
 }
 
+.btn-center {
+  display: flex;
+  align-items: center;
+  margin-top: 4px;
+}
+
 /* Body design */
 .product-body {
   flex: 1 1 auto;

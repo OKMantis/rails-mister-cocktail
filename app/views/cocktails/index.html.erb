@@ -1,13 +1,9 @@
-<div class="container" style="position: relative;">
+<div class="container">
   <div class="row">
     <div class="col-xs-6 col-xs-offset-3">
       <h1>Cocktails#index</h1>
       <% @cocktails.each do |cocktail| %>
       <div class="product">
-        <div class='product-upvote'>
-          <div class="product-arrow"></div>
-          <div class='product-count'>95</div>
-        </div>
         <div class='product-body'>
           <h3><%= cocktail.name %></h3>
           <p><%= link_to 'Show', cocktail_path(cocktail) %></p>
@@ -19,7 +15,7 @@
         </ul>
       </div>
       <% end %>
-      <p><%= link_to 'Add Cocktail', new_cocktail_path, class: 'btn-treehouse' %></p>
+         <div class="btn-center"><%= link_to 'Add Cocktail', new_cocktail_path, class: 'btn-treehouse' %></div>
     </div>
   </div>
 </div>

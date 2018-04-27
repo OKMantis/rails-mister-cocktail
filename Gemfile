@@ -59,7 +59,7 @@ gem 'autoprefixer-rails'
 gem 'bootstrap-sass' # Bootstrap v3
 gem 'font-awesome-sass'
 gem 'simple_form'
-ruby '2.4.3'
+ruby '2.5.0'
 gem 'figaro'
 gem 'cloudinary'
 gem 'carrierwave', '~> 1.2'
